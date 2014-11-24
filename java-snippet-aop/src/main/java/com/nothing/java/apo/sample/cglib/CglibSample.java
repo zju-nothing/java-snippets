@@ -1,5 +1,7 @@
 package com.nothing.java.apo.sample.cglib;
 
+import com.nothing.java.apo.service.TransferService;
+import com.nothing.java.apo.service.impl.TransferServiceImpl;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -8,7 +10,10 @@ import org.slf4j.LoggerFactory;
  */
 public class CglibSample {
     public static void main(String[] args) {
-        Logger logger = LoggerFactory.getLogger(CglibSample.class);
-        logger.info("Im log");
+        CglibProxy cglibProxy = new CglibProxy();
+        //Here the target class is no longer the TransferService interface, but  the TransferServiceImpl instead.
+        TransferServiceImpl proxy = (TransferServiceImpl) cglibProxy.getProxy(TransferServiceImpl.class);
+        String result = proxy.transfer("Are you kidding me.");
+        System.out.println(result);
     }
 }
