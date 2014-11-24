@@ -14,7 +14,7 @@ public class JdkSample {
         TransferService target = new TransferServiceImpl();
 
         //The delegate instance, named proxy.
-        TransferService proxy = (TransferService) Proxy.newProxyInstance(target.getClass().getClassLoader(),target.getClass().getInterfaces(),
+        TransferService proxy = (TransferService) Proxy.newProxyInstance(target.getClass().getClassLoader(), target.getClass().getInterfaces(),
                 new TransferServiceHandler(target));
 
         //Use the delegate instance to invoke the service.

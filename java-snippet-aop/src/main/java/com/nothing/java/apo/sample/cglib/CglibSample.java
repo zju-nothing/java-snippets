@@ -1,9 +1,6 @@
 package com.nothing.java.apo.sample.cglib;
 
-import com.nothing.java.apo.service.TransferService;
 import com.nothing.java.apo.service.impl.TransferServiceImpl;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 /**
  * @author chenliu, create at 11/22/14 20:43
