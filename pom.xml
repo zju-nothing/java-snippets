@@ -10,7 +10,9 @@
     <packaging>pom</packaging>
 
     <modules>
-        <module>./java-snippet-aop</module>
+        <module>java-snippet-aop</module>
+        <module>java-snippet-LTW</module>
+        <module>java-snippet-classloader</module>
     </modules>
 
     <build>
